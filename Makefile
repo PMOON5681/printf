@@ -12,7 +12,6 @@ PRINTF_SRC			=	ft_printf.c \
 						ft_printf_string.c \
 						ft_printf_unsigned_decimal.c
 
-# Compiler
 CC 					= 	cc
 CFLAGS		 		= 	-Wall -Werror -Wextra -I $(LOCAL_HEADER_PATH)
 
