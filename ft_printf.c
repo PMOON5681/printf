@@ -6,7 +6,7 @@
 /*   By: tjiranar <tjiranar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/06 00:48:11 by tjiranar          #+#    #+#             */
-/*   Updated: 2024/10/09 20:49:38 by tjiranar         ###   ########.fr       */
+/*   Updated: 2024/10/09 21:49:19 by tjiranar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,25 +57,14 @@ static int	ft_checktype(const char c, va_list *args)
 		len += ft_printf_decimal(va_arg(*args, int));
 	else if (c == 'u')
 		len += ft_printf_unsigned_decimal(va_arg(*args, unsigned int));
-	else if (c == 'x')
-		len += ft_printf_hex(va_arg(*args, int), 1);
-	else if (c == 'X')
-		len += ft_printf_hex(va_arg(*args, int), 0);
+	else if (c == 'x' || c == 'X')
+		len += ft_printf_hex(va_arg(*args, int), c);
 	else if (c == '%')
+		len += ft_printf_char('%');
+	else
 	{
-		ft_putchar_fd('%', 1);
-		len += 1;
+		len += ft_printf_char('%');
+		len += ft_printf_char(c);
 	}
 	return (len);
-}
-
-int	main(void)
-{
-	int	count;
-	int	count2;
-
-	count2 = printf("%p", &count);
-	printf("\n%d\n", count2);
-	count2 = ft_printf("%p", &count);
-	ft_printf("\n%d", count2);
 }

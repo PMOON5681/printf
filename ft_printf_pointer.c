@@ -6,7 +6,7 @@
 /*   By: tjiranar <tjiranar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 23:30:56 by tjiranar          #+#    #+#             */
-/*   Updated: 2024/10/09 20:52:52 by tjiranar         ###   ########.fr       */
+/*   Updated: 2024/10/09 22:09:11 by tjiranar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ static int	ft_to_hex(unsigned long n)
 	size = 0;
 	size = ft_size(n);
 	base = "0123456789abcdef";
-	if (n > 16)
+	if (n >= 16)
 	{
 		ft_to_hex(n / 16);
 		ft_printf_char(base[n % 16]);

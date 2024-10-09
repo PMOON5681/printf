@@ -6,7 +6,7 @@
 /*   By: tjiranar <tjiranar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/06 01:55:28 by tjiranar          #+#    #+#             */
-/*   Updated: 2024/10/09 20:46:20 by tjiranar         ###   ########.fr       */
+/*   Updated: 2024/10/09 21:14:10 by tjiranar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,8 @@
 
 # include "../libft/libft.h"
 # include <stdarg.h>
-# include <stdio.h>
 
 int			ft_printf(const char *format, ...);
-static int	ft_checktype(const char c, va_list *args);
-
 int			ft_printf_char(int c);
 int			ft_printf_string(char *str);
 int			ft_printf_pointer(void *ptr);
