@@ -12,8 +12,8 @@ PRINTF_SRC			=	ft_printf.c \
 						ft_printf_string.c \
 						ft_printf_unsigned_decimal.c
 
-CC 					= 	cc
-CFLAGS		 		= 	-Wall -Werror -Wextra -I $(LOCAL_HEADER_PATH)
+CC					=	cc
+CFLAGS				=	-Wall -Werror -Wextra -I $(LOCAL_HEADER_PATH)
 
 OBJS				=	$(PRINTF_SRC:.c=.o)
 
@@ -34,6 +34,6 @@ fclean:				clean
 					@rm -rf $(NAME)
 					@cd $(LOCAL_LIBFT_PATH) && make fclean
 
-re: fclean all
+re:					fclean all
 
-.PHONY: all clean fclean re make_libft
+.PHONY:				all clean fclean re make_libft
