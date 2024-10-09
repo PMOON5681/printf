@@ -6,14 +6,14 @@
 /*   By: tjiranar <tjiranar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 23:30:56 by tjiranar          #+#    #+#             */
-/*   Updated: 2024/10/09 20:50:13 by tjiranar         ###   ########.fr       */
+/*   Updated: 2024/10/09 20:52:52 by tjiranar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 #include <stdint.h>
 
-static int	ft_size(unsigned long	n)
+static int	ft_size(unsigned long n)
 {
 	int	digit;
 
