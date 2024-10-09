@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf_decimal.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tjiranar <tjiranar@student.42bangkok.co    +#+  +:+       +#+        */
+/*   By: tjiranar <tjiranar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/06 17:58:36 by tjiranar          #+#    #+#             */
-/*   Updated: 2024/10/09 00:40:15 by tjiranar         ###   ########.fr       */
+/*   Updated: 2024/10/09 20:46:36 by tjiranar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

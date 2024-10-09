@@ -3,19 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tjiranar <tjiranar@student.42bangkok.co    +#+  +:+       +#+        */
+/*   By: tjiranar <tjiranar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/06 00:48:11 by tjiranar          #+#    #+#             */
-/*   Updated: 2024/10/09 02:07:24 by tjiranar         ###   ########.fr       */
+/*   Updated: 2024/10/09 20:49:38 by tjiranar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_printf(const char *format, ...);
+int			ft_printf(const char *format, ...);
 static int	ft_checktype(const char c, va_list *args);
 
-int ft_printf(const char *format, ...)
+int	ft_printf(const char *format, ...)
 {
 	int		i;
 	int		len;
@@ -23,7 +23,7 @@ int ft_printf(const char *format, ...)
 
 	i = 0;
 	len = 0;
-	va_start( args, format);
+	va_start(args, format);
 	while (format[i])
 	{
 		if (format[i] == '%')
@@ -38,7 +38,7 @@ int ft_printf(const char *format, ...)
 		}
 		i++;
 	}
-	va_end( args);
+	va_end(args);
 	return (len);
 }
 
@@ -55,7 +55,7 @@ static int	ft_checktype(const char c, va_list *args)
 		len += ft_printf_pointer(va_arg(*args, void *));
 	else if (c == 'd' || c == 'i')
 		len += ft_printf_decimal(va_arg(*args, int));
-	else if  (c == 'u')
+	else if (c == 'u')
 		len += ft_printf_unsigned_decimal(va_arg(*args, unsigned int));
 	else if (c == 'x')
 		len += ft_printf_hex(va_arg(*args, int), 1);
@@ -72,7 +72,10 @@ static int	ft_checktype(const char c, va_list *args)
 int	main(void)
 {
 	int	count;
+	int	count2;
 
-	count = ft_printf("%x", NULL);
-	ft_printf("\n%d", count);
+	count2 = printf("%p", &count);
+	printf("\n%d\n", count2);
+	count2 = ft_printf("%p", &count);
+	ft_printf("\n%d", count2);
 }
